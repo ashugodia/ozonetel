@@ -21,17 +21,18 @@ Or install it yourself as:
  **Configure authentication key and version**
 
   Add following lines into your rails application.rb file
-
+  ```ruby
   Ozonetel.configure do |c|
     c.outbound_version = 2
     c.api_key = 'xxxxxxxxxxxxxxx'
   end
-
+  ```
  **To send outbound call**
-
+ ```ruby
  response = Ozonetel::Outbound::Call.connect({:phone_no => 'The phone number to place the call to', :extra_data => 'Your KooKoo Tunes', :caller_id => 'Your ozonetel caller id', :url => 'Your application url', :callback_url => 'URL which will be called after the call is finished.'})
-
+```
  Example - 1
+ ```ruby
  response = Ozonetel::Outbound::Call.connect({:phone_no => "xxxxxxxxxx", :extra_data =>"<response><playtext>ILove KooKoo</playtext><hangup/></response>"})
 
  puts response.status
@@ -41,8 +42,9 @@ Or install it yourself as:
  puts response.message
 
  "136989181721681"
-
+```
  Example 2 -
+ ```ruby
  response = Ozonetel::Outbound::Call.connect({:phone_no => "9643919931", :extra_data =>"<response><playtext>ILove KooKoo</playtext><hangup/></response>"})
 
  puts response.status
@@ -52,7 +54,7 @@ Or install it yourself as:
  puts response.message
 
  "Authentication error"
-
+```
 ## Dependencies
 
  gem httparty 0.14.0
