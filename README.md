@@ -45,7 +45,7 @@ Or install it yourself as:
 ```
  Example 2 -
  ```ruby
- response = Ozonetel::Outbound::Call.connect({:phone_no => "9643919931", :extra_data =>"<response><playtext>ILove KooKoo</playtext><hangup/></response>"})
+ response = Ozonetel::Outbound::Call.connect({:phone_no => "xxxxxxxxxx", :extra_data =>"<response><playtext>ILove KooKoo</playtext><hangup/></response>"})
 
  puts response.status
 
