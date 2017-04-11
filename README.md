@@ -55,6 +55,8 @@ Or install it yourself as:
 
  "Authentication error"
 ```
+  For KooKoo Tunes and more detailed API goto http://www.kookoo.in/index.php/kookoo-docs
+  
 ## Dependencies
 
  gem httparty 0.14.0
